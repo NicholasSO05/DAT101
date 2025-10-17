@@ -12,27 +12,28 @@
     <ol>
       <li>Where should you use constants, and where should you use variables? Can they all be constants?</li>
       <p>
-				[du bruker const når verdien ikke skal endres, og let når den skal endre. alle kan ikke være const fordi noen verdier må endres
+				[Ikke alt kan være kontstante, man trenger variabler for data som endres/oppdateres. du bruker const når verdien ikke skal endres, og let når den skal endre.]
 			</p>
       <li>How do parentheses affect the arithmetic outcome of an expression?</li>
       <p>
-				[paranteser endrer rekkefølgen på hvordan uttrykket blir regnet ut, og det som er i paranteser endrer rekkefølgen på hvordan uttrykket blir regnet ut]
+				[Paranteser endrer rekkefølgen på hvordan uttrykket blir regnet ut, og det som er i paranteser endrer rekkefølgen på hvordan uttrykket blir regnet ut]
 			</p>
       <li>How do we limit floating-point numbers to a given number of decimals?</li>
       <p>
-				[toFixed() metoden kan brukes for å brgrense antall desimaler i et flyttall]
+				[toFixed() metoden kan brukes for å brgrense antall desimaler i et flyttall, den returnerer en string, slik at du kan kovertere det tilbake til ett nummer hvis det trengs]
 			</p>
       <li>How can we compare two floating-point values to see if they are equal (is 12.199999 the same as 12.2)?</li>
       <p>
-				[compare floating-point values with tofixed(). og bruk en comparison operator. de er ikke like, men bør utføre kritiske økonomiske beregninger med bruk av kalerte tall. f.eks manipulerer pengeverdier som heltall i ører eller cent istedefor en fraksjon av kroner eller dollar]
+				Du kan sammenligne flyttall ved å bruke .toFixed() og en sammenligningsoperator.
+        [Tallene er ikke helt like, men for kritiske økonomiske beregninger bør du bruke skalerte tall, for eksempel håndtere pengeverdi som heltall i ører eller cent, i stedet for desimaltall i kroner eller dollar.]
 			</p>
       <li>What do comparison operators return, and how can we check if they are FALSE or TRUE?</li>
       <p>
-				[sammenligningsoperatorer returnerer en boolean verdi (trur eller false) og vi kan sjekke om de er true eller false ved å bruke en if statament eller en ternary opperator ( ? : )]
+				[sammenligningsoperatorer returnerer en boolean verdi (true eller false) og vi kan sjekke om de er true eller false ved å bruke en if statament eller en ternary opperator ( ? : )]
 			</p>
       <li>How does the Math.random() function work, and what can it be used for?</li>
       <p>
-				[Math.random() funksjonen returnere et flyttall mellom 0 (inkludert) og 1 (ekskludert). den kan brukes til å lage tilfeldige tall, f.eks i spill eller for å simulere tilfeldige hendelser]
+				[Math.random() funksjonen returnerer et flyttall mellom 0 (inkludert) og 1 (ekskludert). den kan brukes til å lage tilfeldige tall, f.eks i spill eller for å simulere tilfeldige hendelser]
 			</p>
       <li>What is modulus (%), and when do we need this operator in mathematical operations?</li>
       <p>

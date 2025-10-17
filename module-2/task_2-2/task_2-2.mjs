@@ -96,11 +96,12 @@ printOut(newLine);
 
 printOut("--- Part 6 ----------------------------------------------------------------------------------------------");
 //create a variable that contains the following text: "There is much between heaven and earth that we do not understand. Print the number of characters in the text. Print the character at position 19. Print the characters staring at number 35 and 8 characters forward. Print the index at which "earth" starts in the text
-const text = "There is much between heaven and earth that we do not understand.";
+const text = "There is much between heaven and earth that we do not understand";
 
-//step 1: print the number of characters in the text
-const numberOfCharacters = text.length;
-printOut("number of characters: " + numberOfCharacters);
+//step 1: print the number of characters in the text minus spaces
+const nospaces = text.replaceAll(" ", "").length;
+
+printOut("number of characters in the text (excluding spaces): " + nospaces);
 
 //step 2: print the characters at position 19
 const characterAt19 = text.charAt(19);
@@ -132,7 +133,7 @@ printOut("--- Part 7 -----------------------------------------------------------
 printOut("is 5 greater than 3? " + (5 > 3));
 printOut("is 7 greater than or equal to 7? " + (7 >= 7));
 printOut("is \"a\" greater than \"b\"? " + ("a" > "b"));
-printOut('is "1" less than "a"? ' + ("1" < "a"));
+printOut("is '1' less than 'a'? " + ('1' < 'a'));
 printOut('is "2500" less than "abcd"? ' + ("2500" < "abcd"));
 printOut('is "arne" not equal to "thomas"? ' + ("arne" != "thomas"));
 printOut("is (2 equals 5) true? " + (2 == 5));
