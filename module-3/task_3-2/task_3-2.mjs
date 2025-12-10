@@ -20,7 +20,7 @@ printOut(newLine);
 printOut("--- Part 2 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
 //Create a program that can guess a number between 1 and 60. Declare a variable and assign it a value, for example, 45. Let the computer "guess" by generating a random number. Use a "while" loop and the"random" function. Keep the "while" loop running as long as the "guessed number" is incorrect. Print the number once the "while" loop has completed. You do not need to print anything while the "while" loop is inprogress.//
-let targetNumber = Math.floor(Math.random() * 60) + 1;
+let targetNumber = 45;
 let guessedNumber = 0;
 
 while (guessedNumber !== targetNumber) {
@@ -35,7 +35,7 @@ printOut(newLine);
 printOut("--- Part 3 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
 //Take the program from part 2 and expand it to guess a number between 1 and one million. Print the number of guesses as well as the number of milliseconds it took to guess the number. HINT: Use the Date.now() function to measure time.//
-targetNumber = Math.floor(Math.random() * 1000000) + 1;
+targetNumber = 450030;
 guessedNumber = 0;
 let guessCount = 0;
 let startTime = Date.now();

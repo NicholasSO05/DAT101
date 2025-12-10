@@ -10,8 +10,30 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>[1. In part 1, is it possible to solve the problem using a single "for" loop?]</li>
+      <p>[Yes, it is possible]</p>
+      <li>[In part 2, can we create what is known as an "infinite" loop within the condition of the "while" loop?
+          Describe what would or would not be necessary to achieve this. Provide a thorough explanation of
+          your answer.]</li>
+      <p>[no it is not possible to create an infinite loop within the condition of the "while" loop alone. 
+        An infinite loop requires the condition to always evaluate to true, 
+        which means the condition itself must be designed to never become false.
+        This typically involves using a constant true condition like "while(true)" 
+        and controlling the loop exit with a break statement inside the loop body.]</p>
+      <li>[Discuss briefly how quickly or slowly a computer might be able to compute this, considering the
+          number of guesses and the time it takes. How does the program behave while it is guessing? Can
+          the program perform other tasks concurrently?]</li>
+      <p>[A computer can make these guesses very quickly, often in milliseconds. 
+        While the program is guessing, it is usually busy with that task and doesnt do other things 
+        at the same time. It can only perform other tasks concurrently if it is specifically 
+        designed to use asynchronous code, multi-threading, or multiple processes.]</p>
+      <li>[Explain the relationship between rows and columns in nested "for" loops. Can we, for instance,
+          change the order, considering rows to be innermost or columns to be innermost, or does this not
+          matter?]</li>
+      <p>[The order of nested "for" loops affects the sequence in which rows and columns are processed. 
+        Normally, the outer loop represents rows and the inner loop represents columns, 
+        but this can be reversed depending on the desired output. Changing the order changes the way the pattern moves, 
+        so it does matter depending on the context and what you want to achieve.]</p>
     </ol>
     <script type="module" src="./task_3-2.mjs" defer></script>
   </body>
