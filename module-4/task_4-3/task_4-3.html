@@ -97,8 +97,27 @@
   </div>
 </fieldset>
 <ol>
-  <li>[Write the question here, and copy this for more questions]</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
+  <li> 1. In this assignment, we use the DOM. Explain how this library can help us develop interactive web
+pages.<li>
+<p>[The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a 
+  document as a tree of objects, allowing developers to manipulate the content, structure, and style of web pages 
+  dynamically. This enables the creation of interactive and responsive user experiences.]</p>
+<li>What is an event? Simply explain what happens when we add an event listener to an object.<li>
+<p>[An event is an action or occurrence that happens in the system, such as a user interaction (click, keypress) 
+  or a change in state. When we add an event listener to an object, we are specifying a function (callback) that
+  will be executed when the specified event occurs on that object.]</p>
+<li>Sometimes we need to use an event object to get data from the event. Explain how this event
+object is structured, don't explain all functions or attributes. Try to explain, for example, how to
+retrieve data from a keyboard or mouse.<li>
+<p>[The event object is passed as an argument to the event handler function and contains information about the 
+  event that occurred. It includes properties such as `type` (the type of event), `target` (the element that triggered the event), 
+  and specific properties for different event types, such as `key` for keyboard events or `clientX` and `clientY` 
+  for mouse events. This allows developers to access relevant data about the event and respond accordingly.]</p>  
+<li>Explain the main difference between DOM id and DOM name. Can we have identical IDs?</li>
+<p>[The main difference between DOM id and DOM name is that the id attribute is unique within a document and is 
+  used to identify a single element, while the name attribute can be shared among multiple elements and is often 
+  used for form elements. We cannot have identical IDs in a document, as they must be unique to ensure proper 
+  identification and manipulation of elements.]</p>
 </ol>
 <script type="module" src="./task_4-3.mjs" defer></script>
 </body>

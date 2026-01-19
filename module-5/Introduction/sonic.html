@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Sonic Example</title>
+    <style>
+      .prevent-select {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
+    </style>
+    <!-- Import map: map the bare specifier "three" to the local module build. -->
+    <script type="importmap">
+      {
+        "imports": {
+          "libSprite": "../../common/script/libSprite.mjs",
+          "lib2d": "../../common/script/lib2d.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body class="prevent-select">
+    <canvas id="cvs" style="background-color: antiquewhite" width="1024" height="512"></canvas>
+  </body>
+  <script type="module" defer>
+    // import libraries
+    import { TSpriteCanvas, TSprite } from "libSprite";
+
+    // prettier-ignore
+    const SpriteInfoList = {
+    sonic1: { x: 0, y:   0, width: 102, height: 125, count: 6},
+    sonic2: { x: 0, y: 125, width: 102, height: 125, count: 9},
+    sonic3: { x: 0, y: 250, width: 102, height: 125, count: 9},
+    sonic4: { x: 0, y: 375, width: 102, height:  75, count: 7},
+    sonic5: { x: 0, y: 450, width: 100, height: 130, count: 5},
+    sonic6: { x: 0, y: 575, width: 102, height: 125, count: 3},
+    sonic7: { x: 0, y: 700, width: 102, height: 125, count: 2},
+    sonic8: { x: 0, y: 825, width: 102, height: 125, count: 2},
+    sonic9: { x: 0, y: 950, width: 102, height: 125, count: 4}
+  }
+
+    // Global variables
+    const cvs = document.getElementById("cvs");
+    const ctx = cvs.getContext("2d");
+    const spcvs = new TSpriteCanvas(cvs);
+    const hero1 = new TSprite(spcvs, SpriteInfoList.sonic9, 0, 100);
+    const hero2 = new TSprite(spcvs, SpriteInfoList.sonic6, 0, 300);
+
+    // Functions
+    function drawCanvas(){
+      // This is a high performance function
+      // Don't do any heavy calculations here
+
+      hero1.draw();
+      hero2.draw();
+    }
+
+    let dir = 1; // 1 = right, -1 = left
+    let dir2 = 1; // 1 = right, -1 = left
+    function animate(){
+      hero1.x += 6 * dir;
+      console.log(hero1.x);
+      if((hero1.x > cvs.width - hero1.width) || (hero1.x < -hero1.width && dir < 0)){
+        dir *= -1;
+        hero1.flipHorizontal();
+      }
+      
+      hero2.x += 8 * dir2;
+      if((hero2.x > cvs.width - hero2.width) || (hero2.x < -hero2.width && dir2 < 0)){
+      dir2 *= -1;
+      hero2.flipHorizontal();
+      //hero2.hidden = !hero2.hidden; // toggles off or on hero visibility
+      }
+    }
+    
+    
+    function sheetLoaded() {
+      console.log("Sheet loaded");
+      spcvs.showFramerate = true;
+      spcvs.onDraw = drawCanvas;
+      hero1.animationSpeed = 60;
+      hero1.rotation = 0;
+      hero2.animationSpeed = 45;
+      hero2.rotation = 0;
+      
+      // Start animation
+      setInterval(animate, 20);
+    }
+  
+    // Main application
+    spcvs.loadSpriteImage("sonic_sprite_sheet.png", sheetLoaded);
+  </script>
+</html>

@@ -12,6 +12,43 @@
     <ol>
       <li>[Write the question here, and copy this for more questions]</li>
       <p>[Write your answer here, and copy this for more answers]</p>
+      <li>What is an array? A short and concise answer is expected here!</li>
+      <p>An array is a data structure that stores a collection of elements, typically of the same type, in a sequential manner.</p>
+      <li>What does it mean to "hardcode" when we talk about programming? (In English, it's called "hard
+      coding", "hard-coding", or "hardcoding").</li>
+      <p>To hardcode means to write values directly into the source code rather than allowing them to be changed 
+        at runtime or read from an external source.</p>
+      <li>Explain in plain text what happens in task 3, and how we can traverse (iterate) the array when we
+      (humans) don't "know" how long the array is.</li>
+      <p>In task 3, we iterate through an array using a loop. We can traverse the array without knowing its length 
+        by using methods like `for...of` or checking `array.length` in a loop condition.</p>
+      <li>Why is it beneficial to store instances of a class in arrays, as in task 4?</li>
+      <p>Storing instances of a class in arrays allows us to manage multiple objects efficiently and perform operations 
+        on all instances collectively.</p>
+      <li>Try your best to explain the EWeekDays object from task 7. How do we use the "value" attribute, for
+      example? In what way do "WeekDay", "Workdays", and "Weekends" differ from each other? If we
+      wanted to create a new element "WorkoutDays", which would contain "Monday", "Wednesday", and
+      "Thursday", how would it ideally look? (I will choose the best answer to this task and reward it with
+      pizza in the cafeteria right after New Year. Remember to mark in your submission if you want to
+      participate in the competition!)</li>
+      <p>The EWeekDays object is an enumeration that defines different categories of days. The "value" attribute is 
+        used to assign numeric values to each day category. "WeekDay" includes all weekdays, while "Workdays" and "Weekends" are subsets 
+        of weekdays and weekends respectively. To create a new element "WorkoutDays", it would look like this:
+        {
+          Monday: { value: 1 },
+          Wednesday: { value: 3 },
+          Thursday: { value: 4 }
+        }
+      <li> In task 8, we will use a "callback" routine when sorting. Explain how such a "callback" routine works.</li>
+      <p>A callback routine is a function that is passed as an argument to another function and is executed after a certain 
+        event or condition is met. In sorting, the callback function defines the criteria for comparing elements.</p> 
+      <li>What happens in the sorting routines you have created? Try to explain how the array can figure out
+      if an element should come before or after another. The best way to answer this is to actually print
+      both parameters each time the sorting routine runs.
+      <li>In task 10, we will create an array with rows and columns. Explain what the first element of the array
+      contains.</li>
+      <p>The first element of a two-dimensional array typically contains another array, which represents the first 
+        row of the matrix or grid.</p>
     </ol>
     <script type="module" src="./task_4-2.mjs" defer></script>
   </body>
