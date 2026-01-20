@@ -20,12 +20,14 @@
           (e.g., savings, checking). This helps in maintaining consistency and reducing errors by providing a centralized place for these definitions.]</p>
       <li>Discuss why we use encapsulation in classes. Why do we want to "hide" code within our class? Explain how we can 
         create "private" and "public" members in a constructor function.</li>
-        <p>[Encapsulation hides internal implementation details from users of the class, promoting data integrity and security. 
-          Private members are inaccessible from outside the class, while public members are accessible. In JavaScript constructor functions, 
-          private members can be created using closures or symbols.]</p>
+        <p>[Encapsulation is used to protect internal data and implementation details of a class, improving data 
+          integrity and reducing unintended side effects. We “hide” code to prevent external code from directly 
+          modifying internal state. In JavaScript, public members are created by assigning properties to this, 
+          while private members can be created with closures]</p>
       <li>Explain what happens when we use the "new" command in JavaScript.</li>
-        <p>[When the "new" command is used with a constructor function, it creates a new instance of that function's prototype. 
-          It initializes the new object with properties defined within the constructor function and sets up its prototype chain correctly.]</p>
+        <p>[When new is used, we create a new object, set its prototype to the constructor 
+          functions prototype, binds this to the new object, executes the constructor code, and returns the new 
+          object.]</p>
     </ol>
     <script type="module" src="./task_4-1.mjs" defer></script>
   </body>
