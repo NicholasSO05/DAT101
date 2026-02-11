@@ -39,10 +39,12 @@ export class THero extends TSprite {
   }
 
   animate() {
-    const hasGravity = EGameStatus.state === EGameStatus.gaming || EGameStatus.state === EGameStatus.heroIsDead;
+    const hasGravity = EGameStatus.state === EGameStatus.gaming || EGameStatus.state === EGameStatus.heroIsDead || EGameStatus.state === EGameStatus.gameOver;
 
     if (hasGravity) {
-      if (this.y < 400 - this.height) {
+      const groundY = 512 - 114;
+
+      if (this.y < groundY - this.height) {
         this.#speed += this.#gravity; // increase speed due to gravity
         this.y += this.#speed; // update position based on speed
         if (this.rotation < 90) {
@@ -63,7 +65,7 @@ export class THero extends TSprite {
     if (this.#sfFood) this.#sfFood.stop();
 
     this.flap();
-    this.animationSpeed = 20;
+    this.animationSpeed = 0;
 
     if (!this.#sfHeroIsDead) {
       this.#sfHeroIsDead = new TSoundFile(fnHeroIsDead);

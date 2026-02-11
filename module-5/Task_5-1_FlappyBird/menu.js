@@ -130,8 +130,9 @@ export class TMenu {
     if (EGameStatus.state === EGameStatus.gameOver) {
       // Reset Hero
       hero.restart();
+      
 
-      // Clear Arrays
+      // Clear Arrays 
       obstacles.length = 0; // Clear all obstacles
       baits.length = 0; // Clear all baits
 
@@ -182,7 +183,7 @@ export class TMenu {
     this.#spPlayBtn.y = 45; // Adjust Y to be below the game over board
     this.#spPlayBtn.hidden = false;
 
-    // High Score
+    // High Score 
     const currentScore = this.getGameScore();
     const storedHighScore = Number(localStorage.getItem("highScore")) || 0;
     const newHighScore = Math.max(currentScore, storedHighScore);
@@ -193,7 +194,7 @@ export class TMenu {
       this.#highScores.push(currentScore);
     }
 
-    // Medal Logic
+    // Medal Logic 
     let medalIndex;
     if (currentScore >= 30) {
       medalIndex = 1; // Gold medal
