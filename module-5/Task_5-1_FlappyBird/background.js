@@ -5,8 +5,10 @@ export class TBackground {
   #spriteBackground;
   #spriteGround;
 
-  constructor(aSpcvs, aSPI) {
+  constructor(aSpcvs, aSPI, isNight) {
     this.#spriteBackground = new TSprite(aSpcvs, aSPI.background, 0, 0);
+    const backgroundIndex = isNight ? 1 : 0;
+    this.#spriteBackground.index = backgroundIndex;
     const groundpoSY = aSPI.background.height - aSPI.ground.height;
     this.#spriteGround = new TSprite(aSpcvs, aSPI.ground, 0, groundpoSY);
   }
@@ -26,5 +28,8 @@ export class TBackground {
     } else {
       this.#spriteGround.x--;
     }
+  }
+  setDayNight(isNight) {
+    this.#spriteBackground.index = isNight ? 1 : 0;
   }
 }
